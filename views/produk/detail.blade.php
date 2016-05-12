@@ -207,6 +207,6 @@
                 </div>
             </div>
             @endif
-            <div id="reviews">{{pluginTrustklik()}}</div>
+            <div id="reviews">{{ pluginComment(product_url($produk), @$produk) }}</div>
         </div>
     </div>
