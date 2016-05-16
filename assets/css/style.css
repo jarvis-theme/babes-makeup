@@ -321,3 +321,17 @@ footer p, footer form, footer ul li a { color: #fff }
 .result { font-style: italic; }
 .login-wrap form small a, .login-wrap small, p small { font-size: 11px }
 .forget { margin-bottom: 70px }
+center#paypal button[type="submit"] {
+    background: #019CDE;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+}
+center#paypal button[type="submit"]:hover { opacity: 0.6 }
+form[name="order"] > input[name="SAVE"] {
+	background: #B5062D; border: medium none; padding: 10px; border-radius: 5px; color: #fff;
+}
+form[name="order"] > input[name="SAVE"]:hover {
+	opacity: 0.8;
+}

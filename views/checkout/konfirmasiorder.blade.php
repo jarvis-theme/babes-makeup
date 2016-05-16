@@ -73,7 +73,7 @@
                             <label  class="control-label"> Jumlah:</label>
                             <input type="text" class="form-control" placeholder="Jumlah Transfer Dana" name="jumlah" value="{{$order->status==0 ? $order->total : ''}}" required>
                         </div>
-                        <button type="submit" class="btn btn-warning">Konfirmasi</button>
+                        <button type="submit" class="btn btn-warning">{{trans('content.step5.confirm_btn')}}</button>
                     {{Form::close()}}
                 @endif
                 </div>
@@ -99,13 +99,22 @@
             @if($order->jenisPembayaran==2)
                 <h3 class="center">{{trans('content.step5.confirm_btn')}} Via Paypal</h3><br>
                 <p class="center">{{trans('content.step5.paypal')}}</p>
-                {{$paypalbutton}}
+                <center id="paypal">{{$paypalbutton}}</center>
+                <br>
+            @elseif($order->jenisPembayaran==5 && $order->status == 0)
+                <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                    <center>
+                        <h3><strong>{{trans('content.step5.confirm_btn')}} DOKU MyShortCart</strong></h3><br>
+                        <p>{{trans('content.step5.doku')}}</p><br>
+                        {{ $doku_button }}
+                    </center>
+                </div>
                 <br>
             @elseif($order->jenisPembayaran==6)
                 @if($order->status == 0)
                 <h3 class="center">{{trans('content.step5.confirm_btn')}} Via Bitcoin</h3><br>
                 <p class="center">{{trans('content.step5.bitcoin')}}</p>
-                {{$bitcoinbutton}}
+                <center>{{$bitcoinbutton}}</center>
                 <br>
                 @endif
             @elseif($order->jenisPembayaran == 8 && $order->status == 0)
