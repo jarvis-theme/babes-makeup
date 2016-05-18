@@ -328,10 +328,11 @@ center#paypal button[type="submit"] {
     color: #fff;
     border-radius: 5px;
 }
-center#paypal button[type="submit"]:hover { opacity: 0.6 }
+center#paypal button[type="submit"]:hover { opacity: 0.6; cursor: pointer; }
 form[name="order"] > input[name="SAVE"] {
 	background: #B5062D; border: medium none; padding: 10px; border-radius: 5px; color: #fff;
 }
 form[name="order"] > input[name="SAVE"]:hover {
 	opacity: 0.8;
+	cursor: pointer;
 }

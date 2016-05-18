@@ -1,7 +1,7 @@
 Babes-makeup
 ------------
 
-![babes-makeup](http://jarvis-store.com/themes/master-tema/babes-makeup/babes-makeup-preview.jpg)
+![babes-makeup](https://s3-ap-southeast-1.amazonaws.com/cdn2.jarvis-store.com/img/themes/babes-makeup/babes-makeup-preview.jpg)
 
 Babes Makeup adalah template toko online yang bertemakan simple. Template ini dilengkapi slider promo pada halaman utama, serta side banner dan fitur subscribe untuk mempromosikan produk anda.
 
