@@ -102,7 +102,9 @@
             <div class="bank-logo col-sm-12">
                 @if(list_banks()->count() > 0)
                     @foreach(list_banks() as $value)
-                    <img src="{{bank_logo($value)}}" class="img-responsive" alt="{{$value->bankdefault->nama}}" title="{{$value->bankdefault->nama}}">
+                        @if($value->status == 1)
+                        <img src="{{bank_logo($value)}}" class="img-responsive" alt="{{$value->bankdefault->nama}}" title="{{$value->bankdefault->nama}}">
+                        @endif
                     @endforeach
                 @endif
                 @if(count(list_payments()) > 0)
