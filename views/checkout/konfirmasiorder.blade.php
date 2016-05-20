@@ -64,7 +64,7 @@
                             <label  class="control-label"> Rekening Tujuan:</label>
                             <select name="bank" class="form-control">
                                 <option value="">-- Pilih Bank Tujuan --</option>
-                                @foreach (list_banks() as $bank)
+                                @foreach ($banktrans as $bank)
                                 <option value="{{$bank->id}}">{{$bank->bankdefault->nama}} - {{$bank->noRekening}} - A/n {{$bank->atasNama}}</option>
                                 @endforeach
                             </select>
