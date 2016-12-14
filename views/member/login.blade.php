@@ -4,7 +4,7 @@
                 <div class="row">
                     <div class="col-sm-6 col-lg-6 col-lg-offset-3">
                         <div class="login-wrap">
-                            <h2 class="title">Login Member</h2>
+                            <h1 class="title">Login Member</h1>
                             <hr>
                             <form action="{{url('member/login')}}" method="post" enctype="multipart/form-data">
                                 <div class="content-login">

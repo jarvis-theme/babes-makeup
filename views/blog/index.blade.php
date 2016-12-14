@@ -38,7 +38,9 @@
                     @foreach(recentBlog(null,3) as $artikel)
                     <li>
                         <div class="img-block"></div>
-                        <h5 class="title-news">{{short_description($artikel->judul, 20)}}</h5>
+                        <h5 class="title-news">
+                            <a href="{{ blog_url($artikel) }}">{{short_description($artikel->judul, 40)}}</a>
+                        </h5>
                         <p>{{short_description($artikel->isi, 46)}} <a class="read-more" href="{{blog_url($artikel)}}">Selengkapnya</a></p>
                         <span class="date-post">{{date("F d, Y", strtotime($artikel->created_at))}}</span>
                     </li>
@@ -51,9 +53,9 @@
             <div class="tabs-description">
                 @if(count(list_blog(null,@$blog_category)) > 0)
                     @foreach(list_blog(null,@$blog_category) as $blogs)
-                    <h3 class="title">{{$blogs->judul}}</h3>
+                    <h1 class="title"><a href="{{ blog_url($blogs) }}">{{$blogs->judul}}</a></h1>
                     <p>
-                        <small><i class="fa fa-calendar"></i> {{waktuTgl($blogs->updated_at)}}</small>&nbsp;&nbsp;
+                        <small><i class="fa fa-calendar"></i> {{waktuTgl($blogs->created_at)}}</small>&nbsp;&nbsp;
                         @if(!empty($blogs->kategori->nama))
                         <span class="date-post"><i class="fa fa-tags"></i> <a href="{{blog_category_url(@$blogs->kategori)}}">{{@$blogs->kategori->nama}}</a></span>
                         @endif

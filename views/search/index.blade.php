@@ -81,7 +81,9 @@
                     @foreach(recentBlog(null,3) as $artikel)
                     <li>
                         <div class="img-block"></div>
-                        <h5 class="title-news">{{short_description($artikel->judul, 20)}}</h5>
+                        <h5 class="title-news">
+                            <a href="{{ blog_url($artikel) }}">{{short_description($artikel->judul, 40)}}</a>
+                        </h5>
                         <p>{{short_description($artikel->isi, 46)}} <a class="read-more" href="{{blog_url($artikel)}}">Selengkapnya</a></p>
                         <span class="date-post">{{date("F d, Y", strtotime($artikel->created_at))}}</span>
                     </li>
@@ -91,9 +93,9 @@
             @endif
         </div>
         
+        <div id="center_column" class="col-xs-12 col-sm-8 col-lg-9">
         @if($jumlahCari != 0)
             @if(count($hasilpro) > 0)
-            <div id="center_column" class="col-xs-12 col-sm-8 col-lg-9">
                 <div class="product-list">
                     <div class="row">
                         <ul class="grid">
@@ -132,15 +134,17 @@
                     </div>
                 </div>
                 <div class="clr"></div>
-            </div>
-            {{$hasilpro->links()}}
+                <div class="col-xs-12 col-sm-12">
+                    {{ $hasilpro->links() }}
+                </div>
             @endif
             @if(count($hasilhal) > 0 || count($hasilblog) > 0)
-            <div class="inner-bg col-xs-12 col-sm-8 col-lg-9">
-                <div class="tabs-description">
+                <div class="inner-bg tabs-description col-xs-12">
                     @foreach($hasilhal as $hal)
                     <article class="col-lg-12">
-                        <h3 class="title">{{$hal->judul}}</h3>
+                        <h1 class="title">
+                            <a href="{{ url('halaman/'.$hal->slug) }}">{{$hal->judul}}</a>
+                        </h1>
                         <p>
                             {{shortDescription($hal->isi,300)}}<br>
                             <a href="{{url('halaman/'.$hal->slug)}}" class="theme">Baca Selengkapnya →</a>
@@ -149,10 +153,14 @@
                     @endforeach
                     @foreach($hasilblog as $blog_result)  
                     <article class="col-lg-12">
-                        <h3 class="title">{{$blog_result->judul}}</h3>
+                        <h1 class="title">
+                            <a href="{{ blog_url($blog_result) }}">{{$blog_result->judul}}</a>
+                        </h1>
                         <p id="title-blog">
-                            <small><i class="fa fa-calendar"></i> {{waktuTgl($blog_result->updated_at)}}</small>&nbsp;&nbsp;
+                            <small><i class="fa fa-calendar"></i> {{waktuTgl($blog_result->created_at)}}</small>&nbsp;&nbsp;
+                            @if(!empty($blog_result->kategori->nama))
                             <span class="date-post"><i class="fa fa-tags"></i> <a href="{{blog_category_url(@$blog_result->kategori)}}">{{@$blog_result->kategori->nama}}</a></span>
+                            @endif
                         </p>
                         <p>
                             {{short_description($blog_result->isi,300)}}<br>
@@ -162,9 +170,9 @@
                     </article>
                     @endforeach 
                 </div>
-            </div>
             @endif
         @else
-        <article class="text-center"><i>Hasil pencarian tidak ditemukan</i></article>
+            <article class="text-center"><i>Hasil pencarian tidak ditemukan</i></article>
         @endif
+        </div>
     </div>

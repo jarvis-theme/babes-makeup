@@ -78,7 +78,9 @@
                     @foreach(recentBlog(null,3) as $artikel)
                     <li>
                         <div class="img-block"></div>
-                        <h5 class="title-news">{{short_description($artikel->judul, 20)}}</h5>
+                        <h5 class="title-news">
+                            <a href="{{ blog_url($artikel) }}">{{short_description($artikel->judul, 40)}}</a>
+                        </h5>
                         <p>{{short_description($artikel->isi, 46)}} <a class="read-more" href="{{blog_url($artikel)}}">Selengkapnya</a></p>
                         <span class="date-post">{{date("F d, Y", strtotime($artikel->created_at))}}</span>
                     </li>

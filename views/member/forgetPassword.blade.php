@@ -6,7 +6,7 @@
                 <p>Sebuah link untuk me-resset password akan dikirimkan ke email Anda. Harap periksa kembali email yang anda gunakan.</p>
                 <form class="form-horizontal forget" action="{{url('member/forgetpassword')}}" method="post">
                     <div class="input-group">
-                        <input type="email" class="form-control lp" placeholder="Email anda" name="recoveryEmail" required>
+                        <input type="email" class="form-control lp" placeholder="Email anda" name="recoveryEmail" value="{{Input::old('recoveryEmail')}}" required>
                         <span class="input-group-btn btnlp">
                             <button class="btn btn-danger" type="submit">Kirim</button>
                         </span>

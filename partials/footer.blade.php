@@ -88,11 +88,6 @@
                             </a>
                         </li>
                         @endif
-                        @if(!empty($kontak->ym))
-                        <li>
-                            {{ymyahoo($kontak->ym)}}
-                        </li>
-                        @endif
                     </ul>
                 </div>
             </div>

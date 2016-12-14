@@ -81,7 +81,9 @@
                     @foreach(recentBlog(null,3) as $artikel)
                     <li>
                         <div class="img-block"></div>
-                        <h5 class="title-news">{{short_description($artikel->judul, 20)}}</h5>
+                        <h5 class="title-news">
+                            <a href="{{ blog_url($artikel) }}">{{short_description($artikel->judul, 40)}}</a>
+                        </h5>
                         <p>{{short_description($artikel->isi, 46)}} <a class="read-more" href="{{blog_url($artikel)}}">Selengkapnya</a></p>
                         <span class="date-post">{{date("F d, Y", strtotime($artikel->created_at))}}</span>
                     </li>
@@ -114,7 +116,7 @@
                             </div>
                         </div>
                         <div id="prod-right" class="col-lg-6 col-xs-12 col-sm-6">
-                            <h2 class="name-title">{{$produk->nama}}</h2>
+                            <h1 class="name-title">{{$produk->nama}}</h1>
                             @if(!empty($produk->hargaCoret))
                             <span class="priceCoret"><del>{{price($produk->hargaCoret)}}</del></span>
                             @endif
