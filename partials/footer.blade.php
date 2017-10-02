@@ -88,6 +88,13 @@
                             </a>
                         </li>
                         @endif
+                        @if(!empty($kontak->picmix))
+                        <li>
+                            <a href="{{url($kontak->picmix)}}" target="_blank" title="Picmix">
+                                <img class="picmix" src="//d3kamn3rg2loz7.cloudfront.net/blogs/event/icon-picmix.png">
+                            </a>
+                        </li>
+                        @endif
                     </ul>
                 </div>
             </div>
@@ -119,7 +126,7 @@
                 <img class="img-responsive" src="{{url('img/bank/doku.jpg')}}" alt="doku myshortcart" title="Doku" />
                 @endif
                 @if(count(list_veritrans()) > 0 && list_veritrans()->status == 1 && list_veritrans()->type == 1)
-                <img class="img-responsive" src="{{url('img/bank/veritrans.png')}}" alt="Veritrans" title="Veritrans">
+                <img class="img-responsive midtrans" src="{{url('img/bank/midtrans.png')}}" alt="Midtrans" title="Midtrans">
                 @endif
             </div>
         </div>

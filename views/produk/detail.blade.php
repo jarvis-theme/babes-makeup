@@ -162,7 +162,7 @@
                                                 <label class="col-sm-4 control-label">Jumlah :</label>
                                                 <div class="col-sm-5">
                                                     <button type="submit" class="qtyminus" field="qty" /><i class="fa fa-caret-left"></i></button>
-                                                    <input type="text" name="qty" value="1" class="qty" />
+                                                    <input type="text" name="qty" value="1" class="qty" pattern="[0-9]" />
                                                     <button type="button" value="+" class="qtyplus" field="qty" /><i class="fa fa-caret-right"></i></button>
                                                 </div>
                                             </div>

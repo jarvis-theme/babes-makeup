@@ -347,3 +347,7 @@ form[name="order"] > input[name="SAVE"]:hover {
 .desc-prod ul { list-style: disc; padding-left: 20px; }
 .desc-prod ol { list-style: decimal; padding-left: 20px; }
 .login-wrap a:hover { color: #ff76bd; }
+.blog-img { max-width: 100%; margin: 10px 0; }
+.mb0 { margin-bottom: 0; }
+.midtrans { padding: 8px; background: #f8f8f8; }
+.picmix { width: 35px; }
