@@ -1,12 +1,5 @@
 <header>
     <div id="top-header">
-        <div id="logo" class="fl">
-            @if(logo_image_url())
-            <a href="{{url('home')}}">{{HTML::image(logo_image_url(), 'Logo '.Theme::place('title'), array('id'=>'logos'))}}</a>
-            @else
-            <a href="{{url('home')}}" class="logo-text"><h1>{{ shortText(Theme::place('title'),26) }}</h1></a>
-            @endif
-        </div>
         <div class="info">
             @if ( !is_login() )
             <strong>
@@ -20,6 +13,13 @@
                 <span>{{ HTML::link('member', user()->nama,array('class'=>'loginRegLout')) }} |<span class="divide"></span>
                 <span>{{HTML::link('logout', 'Logout',array('class'=>'loginRegLout'))}}</span>
             </strong>
+            @endif
+        </div>
+        <div id="logo" class="fl">
+            @if(logo_image_url())
+            <a href="{{url('home')}}">{{HTML::image(logo_image_url(), 'Logo '.Theme::place('title'), array('id'=>'logos'))}}</a>
+            @else
+            <a href="{{url('home')}}" class="logo-text"><h1>{{ shortText(Theme::place('title'),26) }}</h1></a>
             @endif
         </div>
         <div class="cr"></div>

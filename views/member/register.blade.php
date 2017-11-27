@@ -1,4 +1,4 @@
-    <div class="inner-column row">
+    <div class="inner-column row ml0">
         <div class="inner-bg col-xs-12 col-lg-12">
             <div id="register" class="col-xs-12 col-md-6 col-md-offset-3 zeropadding">
                 <h1>Registrasi Member</h1>
@@ -66,8 +66,12 @@
                     <div class="form-group">
                         <label class="col-md-3">Kode Keamanan</label>
                         <div class="col-md-9">
-                            {{ HTML::image(Captcha::img(), 'Captcha image') }}
-                            {{Form::text('captcha','',array('class'=>'form-control captcha','placeholder'=>'Masukkan kode'))}}
+                            <div class="col-xs-5 col-md-5 pad0">
+                                {{ HTML::image(Captcha::img(), 'Captcha image') }}
+                            </div>
+                            <div class="col-xs-7 col-md-7 pad0 captcha">
+                                {{Form::text('captcha','',array('class'=>'form-control captcha','placeholder'=>'Masukkan kode'))}}
+                            </div>
                         </div>
                     </div>
                     <div>

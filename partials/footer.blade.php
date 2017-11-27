@@ -27,7 +27,7 @@
             <div class="col-xs-12 col-lg-2">
                 <h4 class="title">Ikuti Kami</h4>
                 <div class="block-content">
-                    <ul>
+                    <ul class="footer-sosmed">
                         @if(!empty($kontak->fb))
                         <li>
                             <a href="{{url($kontak->fb)}}" id="fb" title="Facebook">

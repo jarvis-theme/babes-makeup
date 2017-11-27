@@ -1,4 +1,4 @@
-    <div class="inner-column row">
+    <div class="inner-column row wrap-page">
         <div id="left_sidebar" class="col-lg-3 col-xs-12 col-sm-4">
             @if(count(list_category()) > 0)
             <div class="block accordion-widget">
@@ -89,7 +89,7 @@
             </div>
             @endif
         </div>
-        <div id="center_column" class="inner-bg col-lg-9 col-xs-12 col-sm-8">
+        <div id="center_column" class="inner-bg col-lg-9 col-xs-12 col-sm-8 wrap-map">
             <div class="tabs-description">
                 <div class="col-md-12 col-xs-12" id="contact">         
                     <div class="maps" >

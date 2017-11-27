@@ -1,4 +1,4 @@
-    <div class="inner-column row">
+    <div class="inner-column row wrap-page">
         <div id="left_sidebar" class="col-xs-12 col-lg-3 col-sm-4">
             @if(count(list_category()) > 0)
             <div class="block accordion-widget">

@@ -1,4 +1,4 @@
-<div class="inner-column row">
+<div class="inner-column row wrap-home">
     <div id="center_column" class="col-lg-12 col-xs-12 col-sm-12">
         <div id="all-product-home" class="product_home">
             <div class="block-title"><h2>Koleksi Produk</h2></div>

@@ -351,3 +351,30 @@ form[name="order"] > input[name="SAVE"]:hover {
 .mb0 { margin-bottom: 0; }
 .midtrans { padding: 8px; background: #f8f8f8; }
 .picmix { width: 35px; }
+.pad0 { padding: 0; }
+.ml0 { margin-left: 0; }
+.mr0 { margin-right: 0; }
+.quantity label { padding: 0; text-align: left !important; }
+.size-list label { padding: 0; text-align: left !important; }
+.contact-desc { clear: both; }
+.wrap-home { margin-right: -15px; }
+
+@media screen and (max-width: 349px){
+	.captcha { width: 100%; margin-top: 3px; }
+}
+@media screen and (max-width: 425px){
+	.product_home .item { width: 100%; }
+	.product_home .prod-info { text-align: center; }
+	.product_home .product-list .prod-info > .fl { float: none; margin-left: 0; }
+}
+@media screen and (max-width: 767px){
+	.find-code { margin: 10px 0 0 0; }
+	.size-list label { text-align: center !important; }
+	.size-list .form-group > div { padding: 0; }
+	.quantity label { text-align: center !important; }
+	.quantity .form-group > div { padding: 0; text-align: center; }
+	.product-details .btm-details .addtocart { margin: 0; }
+	.wrap-page { margin-right: -15px; }
+	.wrap-map { margin: 0; }
+	ul.footer-sosmed > li { display: inline-block; }
+}

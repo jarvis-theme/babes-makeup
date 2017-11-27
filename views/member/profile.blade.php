@@ -2,7 +2,7 @@
         <div id="left_sidebar" class="col-lg-3 col-xs-12 col-sm-4">
             <div id="categories" class="block">
                 <ul class="block-content">
-                    <li><a href="{{url('member')}}">Daftar Pembelian</a></li>                         
+                    <li><a href="{{url('member')}}">Daftar Pembelian</a></li>
                     <li><a class="active" href="{{url('member/profile/edit')}}">Ubah Profil</a></li>
                 </ul>
             </div>
